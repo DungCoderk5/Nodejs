@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/product.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/cart_popup.css">
+    <link rel="stylesheet" href="./public/css/responsive.css">
+    <link rel="stylesheet" href="./public/css/cart.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <img src="//bizweb.dktcdn.net/thumb/medium/100/493/370/themes/940719/assets/shop_logo_image.png?1713464283843"
+            alt="Shoes Logo">
+        <!-- Navigation -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Thương hiệu</a>
+                    <ul class="subnav" style="list-style: none;">
+
+                    </ul>
+                </li>
+                <li><a href="product.html">Sản phẩm</a></li>
+                <li><a href="#">Accessories - Phụ trang</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header right (search + icons) -->
+        <div class="header-right">
+            <input type="text" placeholder="Tìm kiếm sản phẩm ..." id="animated-placeholder">
+            <i class="fa-solid fa-magnifying-glass" onclick="searchProduct()"></i>
+            <div class="header-icons">
+                <a href="#" onclick="opennguuu()"><i class="fa fa-user"></i></a>
+                <a href="#"><i class="fa fa-heart"></i><span class="icon-badge">0</span></a>
+                <a href="#" onclick="openCart()"><i class="fa fa-shopping-cart"></i><span
+                        class="icon-badge icon-badge1">0</span></a>
+
+                <a href="#" onclick="toggleSidebar()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-cart">
+        <div class="main-cart-breadcrumb" title="Giỏ hàng">
+            <div class="container-about">
+                <div class="section-title-all">
+                    <h1>Giỏ hàng</h1>
+                </div>
+                <div class="breadcrumb-wrap">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html" aria-label="Trang chủ" title="Trang chủ">Trang
+                                chủ</a>
+                        </li>
+
+                        <li class="breadcrumb-item active"><span>Giỏ hàng</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="main-cart-wrap">
+            <div class="container-about">
+                <div class="main-cart-data">
+
+                    <div class="main-cart-data-head section-title-all">
+                        <span>Giỏ hàng của bạn</span>
+                        <p>Bạn đang có <strong>0</strong> sản phẩm trong giỏ hàng</p>
+                    </div>
+                    <div class="main-cart-data-full">
+                        <div class="main-cart-data-full-list">
+                            <div id="cart-container-none"></div>
+                            <div id="cart-container"></div>
+
+
+
+                            <div class="main-cart-data-full-note">
+                                <label>Ghi chú đơn hàng</label>
+                                <textarea id="main-cart-data-full-note" name="note" rows="4"
+                                    placeholder="Nhập thông tin ghi chú của bạn ...">cv</textarea>
+                            </div>
+                        </div>
+                        <div class="main-cart-data-full-total">
+                            <h2>Thông tin đơn hàng</h2>
+                            <div class="main-cart-data-full-total-sub">
+                                <div class="main-cart-data-full-total-sub-price">
+
+                                    <label>Tổng tiền:</label>
+                                    <span id="totalPrice"></span>
+
+                                </div>
+                                <div class="main-cart-data-full-total-text">Phí vận chuyển sẽ được tính ở trang thanh
+                                    toán.
+                                    <br>
+                                    Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.
+                                </div>
+                            </div>
+                            <div class="main-cart-data-full-invoice">
+                                <div class="main-cart-data-full-invoice-head">
+                                    <input type="checkbox" id="main-cart-data-full-invoice"
+                                        name="main-cart-data-full-invoice" autocomplete="off">
+                                    <label for="main-cart-data-full-invoice">Xuất hóa đơn</label>
+                                </div>
+                                <div class="main-cart-data-full-invoice-data">
+                                    <input type="text" name="Công ty" id="main-cart-data-full-invoice-data-company"
+                                        value="" placeholder="Tên công ty">
+                                    <input type="text" name="Mã số thuế" id="main-cart-data-full-invoice-data-tax"
+                                        value="" placeholder="Mã số thuế">
+                                    <input type="text" name="Người đại diện"
+                                        id="main-cart-data-full-invoice-data-address" value=""
+                                        placeholder="Địa chỉ công ty">
+                                    <input type="text" name="Địa chỉ" id="main-cart-data-full-invoice-data-name"
+                                        value="" placeholder="Người nhận hóa đơn">
+                                </div>
+                            </div>
+                            <div class="main-cart-data-full-total-action">
+                                <a href="./product.html" title="Tiếp tục mua hàng">Tiếp tục mua hàng</a>
+
+                                <a href="/checkout" title="Thanh toán">Thanh toán</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footers2"
+        style="background-image: url(//bizweb.dktcdn.net/100/493/370/themes/940719/assets/footers2_background.jpg?1713464283843)">
+        <div class="container-about">
+            <div class="footers2-wrap">
+                <div class="footers2-top">
+                    <div class="footers2-top-item footers2-top-one">
+                        <a href="/" title="F1GENZ Shoes" aria-label="F1GENZ Shoes">
+                            <img title="F1GENZ Shoes"
+                                src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/footers2_one_logo.png?1713464283843"
+                                alt="F1GENZ Shoes">
+                        </a>
+                        <p>F1GENZ SHOES luôn cam kết, đảm bảo đưa sản phẩm trực tiếp từ nhà sản xuất đến tay người dùng
+                            và kiểm soát được chất lượng để đáp ứng được nhu cầu ngày càng cao của khách hàng. Tất cả
+                            các sản phẩm tại F1GENZ SHOES đều có nguồn gốc xuất xứ rõ ràng, chất lượng.</p>
+                    </div>
+                    <div class="footers2-top-item footers2-top-two">
+                        <h4>Liên hệ <i class="fa fa-chevron-down"></i></h4>
+                        <div class="footers2-top-item-content">
+                            <p>Tư vấn dịch vụ: <a aria-label="Liên hệ" title="Liên hệ" href="tel:18006750">1800 6750</a>
+                                <br>
+                                Hỗ trợ sử dụng: <a aria-label="Liên hệ" title="Liên hệ" href="tel:19006750">1900
+                                    6750</a> <br>
+                                Hỗ trợ vận chuyển: <a aria-label="Liên hệ" title="Liên hệ" href="tel:19006719">1900
+                                    6719</a> <br>
+                                Email: <a aria-label="Liên hệ" title="Liên hệ"
+                                    href="mailto:support@sapo.vn">support@sapo.vn</a> <br>
+                                Từ 7h00 – 22h00 các ngày từ thứ 2 đến Chủ nhật
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footers2-top-item footers2-top-three">
+                        <h4>Về chúng tôi <i class="fa fa-chevron-down"></i></h4>
+                        <div class="footers2-top-item-content">
+                            <ul>
+                                <li><a href="/gioi-thieu" aria-label="Giới thiệu" title="Giới thiệu">Giới thiệu</a></li>
+                                <li><a href="/chinh-sach-doi-tra" aria-label="Chính sách đổi trả"
+                                        title="Chính sách đổi trả">Chính sách đổi trả</a></li>
+                                <li><a href="/chinh-sach-bao-mat" aria-label="Chính sách bảo mật"
+                                        title="Chính sách bảo mật">Chính sách bảo mật</a></li>
+                                <li><a href="/dieu-khoan-dich-vu" aria-label="Điều khoản dịch vụ"
+                                        title="Điều khoản dịch vụ">Điều khoản dịch vụ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footers2-top-item footers2-top-four">
+                        <h4>Danh mục nổi bật <i class="fa fa-chevron-down"></i></h4>
+                        <div class="footers2-top-item-content">
+                            <ul>
+                                <li><a href="/chuck-2" aria-label="Chuck 2" title="Chuck 2">Chuck 2</a></li>
+                                <li><a href="/converse-all" aria-label="Converse All" title="Converse All">Converse
+                                        All</a></li>
+                                <li><a href="/socks" aria-label="Socks" title="Socks">Socks</a></li>
+                                <li><a href="/jack-purcell" aria-label="Jack Purcell" title="Jack Purcell">Jack
+                                        Purcell</a></li>
+                                <li><a href="/converse-seasonal" aria-label="Converse Seasonal"
+                                        title="Converse Seasonal">Converse Seasonal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footers2-top-item footers2-top-five">
+                        <h4>Liên hệ với chúng tôi <i class="fa fa-chevron-down"></i></h4>
+                        <div class="footers2-top-item-content">
+                            <p>Luôn cập nhật tất cả các hành động mà chúng tôi đã lưu cho tất cả khách hàng của mình.
+                            </p>
+                            <ul class="shop-social">
+                                <li>
+                                    <a href="/collections/all" target="_blank" aria-label="F1GENZ Shoes - Facebook"
+                                        title="F1GENZ Shoes - Facebook">
+                                        <img width="30" height="30" title="F1GENZ Shoes - Facebook"
+                                            src="https://file.hstatic.net/200000588277/file/facebook__6__53aaa8d352524d3eb025af5203eaa437_icon.png"
+                                            alt="F1GENZ Shoes - Facebook">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/collections/all" target="_blank" aria-label="F1GENZ Shoes - Youtube"
+                                        title="F1GENZ Shoes - Youtube">
+                                        <img width="30" height="30" title="F1GENZ Shoes - Youtube"
+                                            src="https://file.hstatic.net/200000588277/file/youtube__5__4f04522e10494557a651f53a33ad4d76_icon.png"
+                                            alt="F1GENZ Shoes - Youtube">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/collections/all" target="_blank" aria-label="F1GENZ Shoes - Pinterest"
+                                        title="F1GENZ Shoes - Pinterest">
+                                        <img width="30" height="30" title="F1GENZ Shoes - Pinterest"
+                                            src="https://file.hstatic.net/200000588277/file/pinterest_a1a15995132a4275845412deba5f1193_icon.png"
+                                            alt="F1GENZ Shoes - Youtube">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/collections/all" target="_blank" aria-label="F1GENZ Shoes - TikTok"
+                                        title="F1GENZ Shoes - TikTok">
+                                        <img width="30" height="30" title="F1GENZ Shoes - TikTok"
+                                            src="https://file.hstatic.net/200000588277/file/tik-tok_d85bb4e7468c43ac9ed5437649b7405c_icon.png"
+                                            alt="F1GENZ Shoes - TikTok">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/collections/all" target="_blank" aria-label="F1GENZ Shoes - Instagram"
+                                        title="F1GENZ Shoes - Instagram">
+                                        <img width="30" height="30" title="F1GENZ Shoes - Instagram"
+                                            src="https://file.hstatic.net/200000588277/file/instagram__3__7de3ebbce1f24003b516ca6c1d7c24d5_icon.png"
+                                            alt="F1GENZ Shoes - Instagram">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footers2-bot">
+                    <p class="text-copyright">© 2025 - Bản quyền thuộc về
+                        <a target="_blank" title="F1GENZ TECHNOLOGY CO., LTD." aria-label="F1GENZ TECHNOLOGY CO., LTD."
+                            href="https://f1genz.com/">PS4184 Dũng đẹp trai</a>
+                        <a target="_blank"
+                            href="https://www.sapo.vn/?utm_campaign=cpn:f1genz-babie-plm:footer&amp;utm_source=f1genz-babie&amp;utm_medium=referral&amp;utm_content=fm:text_link-km:-sz:&amp;utm_term=&amp;campaign=f1genz-babie"
+                            rel="nofollow">Cung cấp bởi Dungld</a>
+                    </p>
+                    <ul class="shop-payment">
+                        <li class="shop-payment-item">
+                            <a href="/" aria-label="/ - Payment" title="/ - Payment">
+                                <img width="76" height="48"
+                                    src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/shop_payment_item_image_1.png?1713464283843"
+                                    alt="/ - Payment">
+                            </a>
+                        </li>
+                        <li class="shop-payment-item">
+                            <a href="/" aria-label="/ - Payment" title="/ - Payment">
+                                <img width="76" height="48"
+                                    src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/shop_payment_item_image_2.png?1713464283843"
+                                    alt="/ - Payment">
+                            </a>
+                        </li>
+                        <li class="shop-payment-item">
+                            <a href="/" aria-label="/ - Payment" title="/ - Payment">
+                                <img width="76" height="48"
+                                    src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/shop_payment_item_image_3.png?1713464283843"
+                                    alt="/ - Payment">
+                            </a>
+                        </li>
+                        <li class="shop-payment-item">
+                            <a href="/" aria-label="/ - Payment" title="/ - Payment">
+                                <img width="76" height="48"
+                                    src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/shop_payment_item_image_4.png?1713464283843"
+                                    alt="/ - Payment">
+                            </a>
+                        </li>
+                        <li class="shop-payment-item">
+                            <a href="/" aria-label="/ - Payment" title="/ - Payment">
+                                <img width="76" height="48"
+                                    src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/shop_payment_item_image_5.png?1713464283843"
+                                    alt="/ - Payment">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<style>
+    .main-cart .main-cart-wrap .main-cart-data .main-cart-data-full .main-cart-data-full-total .main-cart-data-full-total-action {
+        padding: 15px;
+    }
+
+    .main-cart .main-cart-wrap .main-cart-data .main-cart-data-full .main-cart-data-full-total .main-cart-data-full-total-action a:first-child {
+        background: #FFF;
+        border-color: #333;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .main-cart .main-cart-wrap .main-cart-data .main-cart-data-full .main-cart-data-full-total .main-cart-data-full-total-action a {
+        background: #fcc419;
+        border: 1px solid #fcc419;
+        color: #fff;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 5px 10px;
+        transition: all .4s linear;
+    }
+</style>
+
+</html>
+<script src="./public/js/js.js"></script>
+<script src="index.js"></script>
+<script>
+    window.onload = () => {
+        showallcart();
+    }
+   
+</script>

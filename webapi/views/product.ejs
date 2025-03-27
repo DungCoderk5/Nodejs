@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+</head>
+<body>
+    <h1>Danh sách sản phẩm</h1>
+    <table border="1">
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Hình ảnh</th>
+            <th>Chi tiết</th>
+        </tr>
+        <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.ten %></td>
+                <td><%= product.gia %> VND</td>
+                <td><img src="<%= product.hinh %>" width="100"></td>
+                <td>
+                    <a href="/product/<%= product._id %>">Xem chi tiết</a>
+                </td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
