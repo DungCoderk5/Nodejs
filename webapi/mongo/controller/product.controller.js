@@ -1,7 +1,6 @@
 // thực hiện thao tác CRUD với collection categories
-const {options} = require('../../routes/options');
 const productModel = require('../model/product.model')
-const categoryModel = require('./model/category.model')
+const categoryModel = require('../model/category.model')
 const mongoose = require("mongoose");
 
 

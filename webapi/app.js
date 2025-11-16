@@ -27,8 +27,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static('client'));
 app.use(cors());
 // kết nối database mongodb
 mongoose.connect('mongodb://127.0.0.1:27017/ban_hang')
@@ -44,7 +44,26 @@ app.use('/cart', cartRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/home.html"));
+});
 
+app.get("/product", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/product.html"));
+});
+
+app.get("/cart", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/cart.html"));
+});
+
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/about.html"));
+});
+
+// Trang mặc định
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/index.html"));
+});
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
