@@ -20,7 +20,7 @@ const checkfile = (req, file, cb) => {
 }
 
 const upload = multer({ storage: storage, fileFilter: checkfile });
-const productController = require('../mongo/product.controller');
+const productController = require('../mongo/controller/product.controller');
 // const productModel = require('../mongo/product.model')
 router.get('/', async (req, res) => {
   try {

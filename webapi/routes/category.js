@@ -1,7 +1,7 @@
 // http://localhost:3000/category
 var express = require('express');
 var router = express.Router();
-const categoryController = require('../mongo/category.controller');
+const categoryController = require('../mongo/controller/category.controller');
 // http://localhost:3000/category
 
 router.get('/', async (req, res) => {

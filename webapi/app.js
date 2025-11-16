@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 
-require('./mongo/category.model')
+require('./mongo/model/category.model')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 app.use(cors());
 // kết nối database mongodb
-mongoose.connect('mongodb://127.0.0.1:27017/web19302')
+mongoose.connect('mongodb://127.0.0.1:27017/ban_hang')
 .then(() => console.log('kết nối thành công'))
 .catch(err => console.log(err ,'Kết nối ko thành công'));
 app.use('/', indexRouter);

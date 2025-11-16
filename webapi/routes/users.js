@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const userController = require('../mongo/user.controller');
+const userController = require('../mongo/controller/user.controller');
 
 router.post("/forgot-password", userController.forgotPassword);
 

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const productModel = require('../mongo/product.model');
-const cartController = require('../mongo/cart.controller');
+const productModel = require('../mongo/model/product.model');
+const cartController = require('../mongo/controller/cart.controller');
 // http://localhost:3000/cart
 
 router.get('/', async (req, res) => {
