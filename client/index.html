@@ -338,15 +338,15 @@
     </div>
     <!-- coupon -->
     <div class="home-coupon">
-        <div class="home-coupon-item">
+         <div class="home-coupon-item">
             <img src="https://file.hstatic.net/200000306687/file/background-coupon_d5a81f5bc7ea49_ec6d59fdd17c4a718809792590ed9455.png"
                 alt="">
             <div class="home-coupon-content">
                 <div class="home-coupon-content-head">
-                    <h3>Mã : F1SHOES2</h3>
+                    <h3>Mã : ${voucher.code}</h3>
                     <img decoding="async"
                         src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/home_coupon_item_image_2.png?1713464283843"
-                        title="Mã : F1SHOES2" alt="Mã : F1SHOES2">
+                        title="Mã : ${voucher.code}" alt="Mã : ${voucher.code}">
                     <p>Mã giảm 13% khi mua 2 sản phẩm</p>
                 </div>
                 <div class="home-coupon-content-foot">
@@ -362,78 +362,7 @@
                 </div>
             </div>
         </div>
-        <div class="home-coupon-item">
-            <img src="https://file.hstatic.net/200000306687/file/background-coupon_d5a81f5bc7ea49_ec6d59fdd17c4a718809792590ed9455.png"
-                alt="">
-            <div class="home-coupon-content">
-                <div class="home-coupon-content-head">
-                    <h3>Mã : F1SHOES2</h3>
-                    <img decoding="async"
-                        src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/home_coupon_item_image_2.png?1713464283843"
-                        title="Mã : F1SHOES2" alt="Mã : F1SHOES2">
-                    <p>Mã giảm 13% khi mua 2 sản phẩm</p>
-                </div>
-                <div class="home-coupon-content-foot">
-                    <button data-type="coupon-policy" data-coupon="F1SHOES" title="Điều kiện áp dụng"
-                        fdprocessedid="aaux8r">
-                        Điều kiện áp dụng
-                        <span class="home-coupon-content-info">- Mã giảm 10% khi mua 1 sản phẩm. - Mỗi khách hàng được
-                            sử dụng tối đa 1 lần. - Số lượng voucher có hạn</span>
-                    </button>
-                    <button data-type="coupon-copy" data-coupon="F1SHOES" fdprocessedid="p5qb9s" class="">
-                        <span>Sao chép mã</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="home-coupon-item">
-            <img src="https://file.hstatic.net/200000306687/file/background-coupon_d5a81f5bc7ea49_ec6d59fdd17c4a718809792590ed9455.png"
-                alt="">
-            <div class="home-coupon-content">
-                <div class="home-coupon-content-head">
-                    <h3>Mã : F1SHOES2</h3>
-                    <img decoding="async"
-                        src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/home_coupon_item_image_2.png?1713464283843"
-                        title="Mã : F1SHOES2" alt="Mã : F1SHOES2">
-                    <p>Mã giảm 13% khi mua 2 sản phẩm</p>
-                </div>
-                <div class="home-coupon-content-foot">
-                    <button data-type="coupon-policy" data-coupon="F1SHOES" title="Điều kiện áp dụng"
-                        fdprocessedid="aaux8r">
-                        Điều kiện áp dụng
-                        <span class="home-coupon-content-info">- Mã giảm 10% khi mua 1 sản phẩm. - Mỗi khách hàng được
-                            sử dụng tối đa 1 lần. - Số lượng voucher có hạn</span>
-                    </button>
-                    <button data-type="coupon-copy" data-coupon="F1SHOES" fdprocessedid="p5qb9s" class="">
-                        <span>Sao chép mã</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="home-coupon-item">
-            <img src="https://file.hstatic.net/200000306687/file/background-coupon_d5a81f5bc7ea49_ec6d59fdd17c4a718809792590ed9455.png"
-                alt="">
-            <div class="home-coupon-content">
-                <div class="home-coupon-content-head">
-                    <h3>Mã : F1SHOES2</h3>
-                    <img decoding="async"
-                        src="//bizweb.dktcdn.net/100/493/370/themes/940719/assets/home_coupon_item_image_2.png?1713464283843"
-                        title="Mã : F1SHOES2" alt="Mã : F1SHOES2">
-                    <p>Mã giảm 13% khi mua 2 sản phẩm</p>
-                </div>
-                <div class="home-coupon-content-foot">
-                    <button data-type="coupon-policy" data-coupon="F1SHOES" title="Điều kiện áp dụng"
-                        fdprocessedid="aaux8r">
-                        Điều kiện áp dụng
-                        <span class="home-coupon-content-info">- Mã giảm 10% khi mua 1 sản phẩm. - Mỗi khách hàng được
-                            sử dụng tối đa 1 lần. - Số lượng voucher có hạn</span>
-                    </button>
-                    <button data-type="coupon-copy" data-coupon="F1SHOES" fdprocessedid="p5qb9s" class="">
-                        <span>Sao chép mã</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+       
     </div>
     <!-- Home about -->
     <div class="home-about">
@@ -1146,11 +1075,13 @@
 <script src="./public/js/js.js"></script>
 <script src="index.js"></script>
 <script src="./product/product.js"></script>
+<script src="./voucher/voucher.js"></script>
 
 <script>
     window.onload = () => {
         showProductSale();
         showProductHot();
+        getAllVocher();
         document.getElementById("login-menu").addEventListener("submit", async function (event) {
 
 
@@ -1205,25 +1136,7 @@
     });
 
 </script>
-<script>
-    let ngu = document.querySelectorAll('[data-type="coupon-copy"]');
-    ngu.forEach(function (item) {
-        item.addEventListener('click', function handler() {
-            let text = item.getAttribute('data-coupon');
-            navigator.clipboard.writeText(text);
-            // alert('Đã sao chép mã giảm giá');
-            item.textContent = 'Đã sao chép';
-            setTimeout(() => {
-                item.textContent = 'Sao chép mã';
-                item.classList.add('hieung');
-                // item.style.cursor = "none";
-            }, 2000);
-            item.removeEventListener('click', handler);
-        });
-    });
 
-
-</script>
 
 <style>
     #toTopBtn {
